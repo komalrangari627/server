@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <p><%= note %></p>
+
+  <ul>
+    <% services.forEach(service => { %>
+      <li>
+        <strong><%= service.name %></strong> - <%= service.cost %> (<%= service.duration %>)
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/">🏠 Back to Home</a>
+</body>
+</html>
