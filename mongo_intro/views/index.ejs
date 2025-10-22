@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= intro %></h1>
+
+  <h2>Topics</h2>
+  <ul>
+    <% topics.forEach(topic => { %>
+      <li><strong><%= topic.title %></strong> - <%= topic.description %></li>
+    <% }) %>
+  </ul>
+
+  <h2>Contact Us</h2>
+  <form action="/submit-form" method="POST">
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <textarea name="message" placeholder="Message"></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <a href="/about">About Page</a>
+</body>
+</html>
